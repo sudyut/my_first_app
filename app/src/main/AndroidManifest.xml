@@ -9,10 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Mgraph"></activity>
+        <activity android:name=".Transact"></activity>
+        <activity android:name=".Det_transact" />
+        <activity android:name=".Income" />
+        <activity android:name=".Borrow_lend" />
+        <activity android:name=".All_transact" />
+        <activity android:name=".Invest" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Mgraph" />
         <activity android:name=".Wgraph" />
         <activity android:name=".Dgraph" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Layout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

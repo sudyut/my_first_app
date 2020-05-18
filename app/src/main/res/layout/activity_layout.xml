@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/Mny_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="316dp"
+            android:layout_marginLeft="316dp"
+            android:layout_marginBottom="360dp"
+            android:hint="Money left" />
+
+        <Button
+            android:id="@+id/income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/VeiwTr"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="559dp"
+            android:onClick="sincome"
+            android:text="Enter income and details" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter income and % saving to begin"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="21dp" />
+
+        <Button
+            android:id="@+id/MakeTr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="458dp"
+            android:onClick="stransact"
+            android:text="Make a transaction" />
+
+        <Button
+            android:id="@+id/VeiwTr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="364dp"
+            android:onClick="salltransact"
+            android:text="View all transactions" />
+
+        <Button
+            android:id="@+id/DetTr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="267dp"
+            android:onClick="sdtransact"
+            android:text="veiw detailed transactions" />
+
+        <Button
+            android:id="@+id/bl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="182dp"
+            android:onClick="sblend"
+            android:text="Borrowing/Lending" />
+
+        <TextView
+            android:id="@+id/DailyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="294dp"
+            android:layout_marginLeft="294dp"
+            android:layout_marginBottom="564dp"
+            android:hint="Today's Expense" />
+
+        <TextView
+            android:id="@+id/MonthlyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="293dp"
+            android:layout_marginLeft="293dp"
+            android:layout_marginBottom="489dp"
+            android:hint="Monthly Expense" />
+
+        <TextView
+            android:id="@+id/WeeklyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="294dp"
+            android:layout_marginLeft="294dp"
+            android:layout_marginBottom="417dp"
+            android:hint="Weekly Expense" />
+
+        <TextView
+            android:id="@+id/Savingleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="319dp"
+            android:layout_marginLeft="319dp"
+            android:layout_marginBottom="322dp"
+            android:hint="Savings left" />
+
+        <Button
+            android:id="@+id/graph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/DetTr"
+            android:onClick="sgraph"
+            android:text="Graph" />
+
+        <Button
+            android:id="@+id/invest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bl"
+            android:onClick="ainvest"
+            android:text="invest" />
+
+
+</RelativeLayout>
