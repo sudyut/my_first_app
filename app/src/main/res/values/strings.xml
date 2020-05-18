@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">GRAPHFINAL</string>
+        <string name="emptitle">Investment page</string>
+        <string name="empsav">Employee savings</string>
+        <string name="invest">Enter % investment</string>
+        <string name="amount">Amt of investment</string>
+        <string name="btn1">ok</string>
+        <string name="btn2">cancel</string>
+        <string name="link">
+        <br>
+        https://finviz.com/ \n</br>
+        <br>
+        https://in.tradingview.com/ \n</br>
+        <br>
+            https://in.finance.yahoo.com \n</br></string>
+        <string name="suggestion">
+    <br>
+        RECOMENDATIONS \n</br>
+    <br>
+        1.If your savings are less than1000-do not invest \n</br>
+    <br>
+        2.If your savings are 2000-5000 - invest 5% of your savings \n</br>
+    <br>
+        3.If your savings are 5000-10000 - invest 10% of your savings \n</br>
+    <br>
+        4.In all other cases you can invest 20% of your savings \n</br></string>
 </resources>
