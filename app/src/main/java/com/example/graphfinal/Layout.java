@@ -13,12 +13,12 @@ import android.widget.Spinner;
 import java.sql.BatchUpdateException;
 
 public class Layout extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-Button graph;
+//Button graph;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
-        graph=(Button)findViewById(R.id.graph);
+        //graph = findViewById(R.id.graph);
 
         Spinner spinner=findViewById(R.id.spin1);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.days,android.R.layout.simple_spinner_item);
