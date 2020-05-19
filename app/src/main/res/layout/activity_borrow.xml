@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Transact">
+
+    <EditText
+        android:id="@+id/Bamount"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Enter Amount in rupees"
+        android:textSize="30dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <EditText
+        android:id="@+id/LName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/Lamount"
+        android:layout_marginTop="53dp"
+        android:hint="Borrower's Name"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <Spinner
+        android:id="@+id/PaymentMode"
+        android:layout_width="409dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/BName"
+        android:layout_marginTop="63dp"
+        android:entries="@array/mode"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/PaymentMode"
+        android:layout_marginTop="69dp"
+        android:text="Make Transact"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="426dp" />
+</RelativeLayout>

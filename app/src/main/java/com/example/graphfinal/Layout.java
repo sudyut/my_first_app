@@ -28,13 +28,15 @@ public class Layout extends AppCompatActivity implements AdapterView.OnItemSelec
     FirebaseFirestore fstore;
     FirebaseAuth fauth;
     String userId;
+    Button borrow,lend1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
         //graph = findViewById(R.id.graph);
         income =findViewById(R.id.Savingleft);
-
+        borrow=findViewById(R.id.b);
+        lend1=findViewById(R.id.lend);
         fauth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
 
@@ -53,6 +55,20 @@ public class Layout extends AppCompatActivity implements AdapterView.OnItemSelec
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        borrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent( Layout.this,Borrow.class);
+            startActivity(i);
+            }
+        });
+        lend1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(Layout.this,Lend.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void ainvest(View view)
@@ -65,11 +81,11 @@ public class Layout extends AppCompatActivity implements AdapterView.OnItemSelec
         Intent i=new Intent(this,All_transact.class);
         startActivity(i);
     }
-    public void sblend(View view)
-    {
-        Intent i=new Intent(this,Borrow_lend.class);
-        startActivity(i);
-    }
+//    public void sblend(View view)
+//    {
+//        Intent i=new Intent(this,Borrow_lend.class);
+//        startActivity(i);
+//    }
     public void sdtransact(View view)
     {
         Intent i=new Intent(this,Det_transact.class);

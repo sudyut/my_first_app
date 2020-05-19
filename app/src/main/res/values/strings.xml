@@ -38,4 +38,9 @@
         <item>UPI</item>
         <item>card</item>
     </array>
+    <array name="selection">
+        <item>Borrow</item>
+        <item>Lend</item>
+    </array>
+
 </resources>
