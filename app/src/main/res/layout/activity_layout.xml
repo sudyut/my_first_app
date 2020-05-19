@@ -121,12 +121,13 @@
             android:layout_height="119dp"
             android:layout_above="@id/bl"
             android:layout_marginStart="16dp"
+            android:layout_marginBottom="24dp"
             android:backgroundTint="#3c40c6"
             android:onClick="ainvest"
             android:text="invest"
             android:textColor="#d2dae2"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="443dp" />
+            app:layout_constraintBottom_toTopOf="@+id/graph"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
             android:id="@+id/imageButton"
