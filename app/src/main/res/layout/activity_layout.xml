@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Layout">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:text="LOGOUT"
+            tools:layout_editor_absoluteX="294dp"
+            tools:layout_editor_absoluteY="16dp" />
 
         <TextView
             android:id="@+id/Mny_left"
@@ -12,77 +19,58 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="316dp"
-            android:layout_marginLeft="316dp"
-            android:layout_marginBottom="360dp"
-            android:hint="Money left" />
-
-        <Button
-            android:id="@+id/income"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/VeiwTr"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="559dp"
-            android:onClick="sincome"
-            android:text="Enter income and details" />
-
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter income and % saving to begin"
+            android:background="#dfe6e9"
+            android:hint="Money left"
             android:textSize="30sp"
-            tools:layout_editor_absoluteX="160dp"
-            tools:layout_editor_absoluteY="21dp" />
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="104dp" />
 
         <Button
             android:id="@+id/MakeTr"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="458dp"
+            android:layout_alignParentBottom="false"
+            android:background="#4cd137"
             android:onClick="stransact"
-            android:text="Make a transaction" />
+            android:text="Make a transaction"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="177dp" />
 
         <Button
             android:id="@+id/VeiwTr"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="364dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#fbc531"
             android:onClick="salltransact"
-            android:text="View all transactions" />
-
-        <Button
-            android:id="@+id/DetTr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="267dp"
-            android:onClick="sdtransact"
-            android:text="veiw detailed transactions" />
+            android:text="View all transactions"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="0dp" />
 
         <Button
             android:id="@+id/bl"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="182dp"
+            android:background="#0097e6"
             android:onClick="sblend"
-            android:text="Borrowing/Lending" />
+            android:text="Borrowing/Lending"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="332dp" />
 
         <TextView
             android:id="@+id/DailyTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="294dp"
-            android:layout_marginLeft="294dp"
-            android:layout_marginBottom="564dp"
-            android:hint="Today's Expense" />
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="false"
+            android:background="#dfe6e9"
+            android:hint="Today's Expense"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="661dp" />
 
         <TextView
             android:id="@+id/MonthlyTv"
@@ -91,10 +79,11 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="293dp"
-            android:layout_marginLeft="293dp"
-            android:layout_marginBottom="489dp"
-            android:hint="Monthly Expense" />
+            android:background="#dfe6e9"
+            android:hint="Monthly Expense"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="470dp" />
 
         <TextView
             android:id="@+id/WeeklyTv"
@@ -103,10 +92,11 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="294dp"
-            android:layout_marginLeft="294dp"
-            android:layout_marginBottom="417dp"
-            android:hint="Weekly Expense" />
+            android:background="#dfe6e9"
+            android:hint="Weekly Expense"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="173dp"
+            tools:layout_editor_absoluteY="597dp" />
 
         <TextView
             android:id="@+id/Savingleft"
@@ -115,18 +105,21 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="319dp"
-            android:layout_marginLeft="319dp"
-            android:layout_marginBottom="322dp"
-            android:hint="Savings left" />
+            android:background="#dfe6e9"
+            android:hint="Savings left"
+            android:textColor="#d63031"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="104dp" />
 
         <Button
             android:id="@+id/graph"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/DetTr"
             android:onClick="sgraph"
-            android:text="Graph" />
+            android:text="Graph"
+            tools:layout_editor_absoluteX="242dp"
+            tools:layout_editor_absoluteY="515dp" />
 
         <Button
             android:id="@+id/invest"
@@ -134,7 +127,9 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/bl"
             android:onClick="ainvest"
-            android:text="invest" />
+            android:text="invest"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="524dp" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

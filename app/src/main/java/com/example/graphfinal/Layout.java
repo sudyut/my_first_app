@@ -54,5 +54,10 @@ Button graph;
         Intent i=new Intent(this,Income.class);
         startActivity(i);
     }
+    public void logout(View view)
+    {
+        Intent i=new Intent(this,Login.class);
+        startActivity(i);
+    }
 
 }

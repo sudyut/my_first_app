@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">GRAPHFINAL</string>
-        <string name="emptitle">Investment page</string>
-        <string name="empsav">Employee savings</string>
-        <string name="invest">Enter % investment</string>
-        <string name="amount">Amt of investment</string>
-        <string name="btn1">ok</string>
-        <string name="btn2">cancel</string>
-        <string name="link">
+    <string name="emptitle">Investment page</string>
+    <string name="empsav">Employee savings</string>
+    <string name="invest">Enter % investment</string>
+    <string name="amount">Amt of investment</string>
+    <string name="btn1">ok</string>
+    <string name="btn2">cancel</string>
+    <string name="link">
         <br>
         https://finviz.com/ \n</br>
         <br>
         https://in.tradingview.com/ \n</br>
         <br>
             https://in.finance.yahoo.com \n</br></string>
-        <string name="suggestion">
+    <string name="suggestion">
     <br>
         RECOMENDATIONS \n</br>
     <br>
