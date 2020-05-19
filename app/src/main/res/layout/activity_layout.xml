@@ -103,37 +103,42 @@
         <TextView
             android:id="@+id/Savingleft"
             android:layout_width="175dp"
-            android:layout_height="27dp"
+            android:layout_height="0dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginTop="11dp"
             android:background="#dfe6e9"
             android:hint="Savings left"
             android:textColor="#d63031"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="207dp"
-            tools:layout_editor_absoluteY="146dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
         <Button
             android:id="@+id/graph"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="54dp"
+            android:layout_marginBottom="76dp"
             android:onClick="sgraph"
             android:text="Graph"
-            tools:layout_editor_absoluteX="54dp"
-            tools:layout_editor_absoluteY="661dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/invest"
             android:layout_width="122dp"
             android:layout_height="119dp"
             android:layout_above="@id/bl"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="54dp"
             android:backgroundTint="#3c40c6"
             android:onClick="ainvest"
             android:text="invest"
             android:textColor="#d2dae2"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="488dp" />
+            app:layout_constraintBottom_toTopOf="@+id/graph"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
             android:id="@+id/imageButton"
