@@ -1,5 +1,6 @@
 package com.example.graphfinal;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,16 +10,43 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.sql.BatchUpdateException;
 
 public class Layout extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 //Button graph;
+    TextView income;
+    FirebaseFirestore fstore;
+    FirebaseAuth fauth;
+    String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
         //graph = findViewById(R.id.graph);
+        income =findViewById(R.id.Savingleft);
+
+        fauth=FirebaseAuth.getInstance();
+        fstore=FirebaseFirestore.getInstance();
+
+        userId=fauth.getCurrentUser().getUid();
+
+        DocumentReference documentReference=fstore.collection("users").document(userId);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                income.setText(documentSnapshot.getString("income"));
+            }
+        });
 
         Spinner spinner=findViewById(R.id.spin1);
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.days,android.R.layout.simple_spinner_item);
@@ -62,6 +90,10 @@ public class Layout extends AppCompatActivity implements AdapterView.OnItemSelec
     {
         Intent i=new Intent(this,Login.class);
         startActivity(i);
+    }
+    public void loadIncome( View v)
+    {
+
     }
 
     @Override
