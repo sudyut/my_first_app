@@ -32,4 +32,10 @@
         <item>WEEKLY</item>
         <item>MONTHLY</item>
     </string-array>
+    <array name="mode">
+        <item>cash</item>
+        <item>mobile wallet</item>
+        <item>UPI</item>
+        <item>card</item>
+    </array>
 </resources>
