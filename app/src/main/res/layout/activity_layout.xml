@@ -65,7 +65,7 @@
             android:layout_alignParentStart="false"
             android:layout_alignParentLeft="false"
             android:layout_alignParentBottom="false"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="14dp"
             android:background="#dfe6e9"
             android:hint="Today's Expense"
             android:textSize="24sp"
@@ -79,7 +79,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="14dp"
             android:background="#dfe6e9"
             android:hint="Monthly Expense"
             android:textSize="24sp"
@@ -93,7 +93,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="178dp"
+            android:layout_marginBottom="228dp"
             android:background="#dfe6e9"
             android:hint="Weekly Expense"
             android:textSize="24sp"
@@ -116,38 +116,48 @@
             app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
         <Button
-            android:id="@+id/graph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="54dp"
-            android:layout_marginBottom="76dp"
-            android:onClick="sgraph"
-            android:text="Graph"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
             android:id="@+id/invest"
             android:layout_width="122dp"
             android:layout_height="119dp"
             android:layout_above="@id/bl"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="54dp"
+            android:layout_marginStart="16dp"
             android:backgroundTint="#3c40c6"
             android:onClick="ainvest"
             android:text="invest"
             android:textColor="#d2dae2"
-            app:layout_constraintBottom_toTopOf="@+id/graph"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="443dp" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="390dp"
-            android:layout_height="135dp"
+            android:layout_width="378dp"
+            android:layout_height="110dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/icon" />
+
+        <Spinner
+            android:id="@+id/spin1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:background="#dfe6e9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WeeklyTv">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/graph"
+            android:layout_width="130dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="24dp"
+            android:background="#dfe6e9"
+            android:text="GRAPH"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="586dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

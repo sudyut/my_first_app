@@ -24,4 +24,12 @@
         3.If your savings are 5000-10000 - invest 10% of your savings \n</br>
     <br>
         4.In all other cases you can invest 20% of your savings \n</br></string>
+
+
+    <string-array name="days">
+        <item>-select-</item>
+        <item>DAILY</item>
+        <item>WEEKLY</item>
+        <item>MONTHLY</item>
+    </string-array>
 </resources>

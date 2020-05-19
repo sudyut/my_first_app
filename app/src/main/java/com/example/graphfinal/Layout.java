@@ -5,22 +5,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import java.sql.BatchUpdateException;
 
-public class Layout extends AppCompatActivity {
+public class Layout extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 Button graph;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
         graph=(Button)findViewById(R.id.graph);
-    }
-    public void sgraph(View view)
-    {
-        Intent i=new Intent(this,MainActivity.class);
-        startActivity(i);
+
+        Spinner spinner=findViewById(R.id.spin1);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.days,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     public void ainvest(View view)
@@ -60,4 +64,31 @@ Button graph;
         startActivity(i);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if (parent.getItemAtPosition(position).equals("-select-"))
+        {
+            //do_nothing
+        }
+        if (parent.getItemAtPosition(position).equals("DAILY"))
+        {
+            Intent i1=new Intent(this,Dgraph.class);
+            startActivity(i1);
+        }
+        if (parent.getItemAtPosition(position).equals("WEEKLY"))
+        {
+            Intent i1=new Intent(this,Wgraph.class);
+            startActivity(i1);
+        }
+        if (parent.getItemAtPosition(position).equals("MONTHLY"))
+        {
+            Intent i1=new Intent(this,Mgraph.class);
+            startActivity(i1);
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
